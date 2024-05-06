@@ -2,6 +2,7 @@ import Description from '../Description/Description.jsx';
 import Feedback from '../Feedback/Feedback.jsx';
 import Options from '../Options/Options.jsx';
 import Notification from '../Notification/Notification.jsx';
+import css from './App.module.css';
 import { useState, useEffect } from 'react';
 
 export default function App() {
@@ -29,7 +30,7 @@ export default function App() {
   }, [feedback]);
 
   return (
-    <div>
+    <div className={css.container}>
       <Description />
       <Options
         onLeaveFeedback={onLeaveFeedback}
